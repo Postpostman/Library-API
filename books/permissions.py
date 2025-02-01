@@ -1,7 +1,5 @@
 from rest_framework import permissions
 
-from books.models import Book
-
 
 class IsAdminOrReadOnly(permissions.BasePermission):
     """
