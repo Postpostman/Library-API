@@ -1,7 +1,7 @@
 from django.db import models
 
 from books.models import Book
-from customer.models import Customer
+from customer.models import User
 
 
 class Borrowing(models.Model):
@@ -10,7 +10,7 @@ class Borrowing(models.Model):
     Actual_return_day = models.DateField()
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="borrowings")
     customer = models.ForeignKey(
-        Customer, on_delete=models.CASCADE, related_name="borrowings"
+        User, on_delete=models.CASCADE, related_name="borrowings"
     )
     is_returned = models.BooleanField(default=False)
 
