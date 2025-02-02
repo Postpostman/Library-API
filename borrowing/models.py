@@ -1,6 +1,7 @@
 from django.db import models
 
 from books.models import Book
+from customer.models import Customer
 
 
 class Borrowing(models.Model):
