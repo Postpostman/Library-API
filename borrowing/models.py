@@ -5,14 +5,14 @@ from customer.models import User
 
 
 class Borrowing(models.Model):
-    Borrow_date = models.DateField()
-    Expected_return_date = models.DateField()
-    Actual_return_day = models.DateField()
+    borrow_date = models.DateField()
+    expected_return_date = models.DateField()
+    actual_return_day = models.DateField()
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="borrowings")
-    customer = models.ForeignKey(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="borrowings"
     )
     is_returned = models.BooleanField(default=False)
 
-    def str(self):
-        return f"Borrowing of {self.book} by {self.customer}"
+    def __str__(self):
+        return f"Borrowing of {self.book} by {self.user}"
