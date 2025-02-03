@@ -7,15 +7,15 @@ class Book(models.Model):
         HARD = "HARD", "Hardcover"
         SOFT = "SOFT", "Softcover"
 
-    Title = models.CharField(max_length=63)
-    Author = models.CharField(max_length=50)
-    Cover = models.CharField(
+    title = models.CharField(max_length=63)
+    author = models.CharField(max_length=50)
+    cover = models.CharField(
         max_length=5,
         choices=CoverType.choices,
         default=CoverType.HARD,
     )
-    Inventory = models.PositiveIntegerField(validators=[MinValueValidator(1)])
-    Daily_fee = models.DecimalField(
+    inventory = models.PositiveIntegerField(validators=[MinValueValidator(1)])
+    daily_fee = models.DecimalField(
         max_digits=7,
         decimal_places=2,
         default=0.00,
