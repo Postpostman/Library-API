@@ -3,6 +3,12 @@ from borrowing.models import Borrowing
 from books.models import Book
 
 
+class BorrowingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Borrowing
+        fields = "__all__"
+
+
 class BorrowingReadSerializer(serializers.ModelSerializer):
     """Read-serializer for viewing the list and details of borrowings."""
     user = serializers.ReadOnlyField(source="user.id")
