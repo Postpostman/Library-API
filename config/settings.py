@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "user",
     "books",
-    "customer",
     "borrowing",
     "drf_spectacular",
 ]
@@ -112,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "customer.User"
+AUTH_USER_MODEL = "user.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

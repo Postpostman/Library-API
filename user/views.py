@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
-from customer.models import User
-from customer.serializers import UserSerializer
+from user.models import User
+from user.serializers import UserSerializer
 from rest_framework import generics, viewsets
-from customer.permissions import IsAuthenticated
+from user.permissions import IsAuthenticated
 
 
 class UserViewSet(viewsets.ModelViewSet):
