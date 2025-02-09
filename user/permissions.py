@@ -1,10 +1,11 @@
-from rest_framework import permissions
+# users/permissions.py
+from rest_framework.permissions import BasePermission
 
 
-class IsAuthenticated(permissions.BasePermission):
+class IsOwner(BasePermission):
     """
-    Allows access only for authenticated users.
+    Permission for checking is user owner or not
     """
 
-    def has_permission(self, request, view):
-        return bool(request.user and request.user.is_authenticated)
+    def has_object_permission(self, request, view, obj):
+        return obj == request.user
