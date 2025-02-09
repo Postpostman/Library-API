@@ -12,6 +12,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/books/", include("books.urls", namespace="books")),
     path("api/borrowing/", include("borrowing.urls", namespace="borrowing")),
+    path("api/payment/", include("payment.urls", namespace="payment")),
     path("api/user/", include("user.urls", namespace="user")),
 
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
