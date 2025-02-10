@@ -5,12 +5,13 @@ from rest_framework.response import Response
 from rest_framework import status
 import stripe
 from django.conf import settings
-from .models import Payment
-from .serializers import PaymentSerializer
-from .permissions import IsAdminOrOwner
+from payment.models import Payment
+from payment.serializers import PaymentSerializer
+from payment.permissions import IsAdminOrOwner
 from borrowing.models import Borrowing
 
-stripe.api_key = settings.STRIPE_SECRET_KEY  # API-ключ із .env
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
 
 class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
