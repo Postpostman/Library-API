@@ -106,8 +106,13 @@ docker run -p 8000:8000 Library-API
 - **POST** `/borrowing/<id>/return/` - Mark a book as returned (increases inventory by 1)
 
 ## Screenshots
-![Book Service](media/images/photo1.jpg)
-![Borrowing Service](media/images/photo2.jpg)
-![User Service](media/images/photo3.jpg)
-![API Docs](media/images/photo4.jpg)
-![Docker Setup](media/images/photo5.jpg)
+Trello tasks
+![trello tasks](media/images/photo1.jpg)
+Book list
+![Book list](media/images/photo2.jpg)
+Payment list
+![Payment list](media/images/photo3.jpg)
+Borrowing list
+![Borrowing list](media/images/photo4.jpg)
+Register api
+![Register api](media/images/photo5.jpg)
