@@ -4,9 +4,9 @@ from rest_framework import status
 from rest_framework.test import APIClient
 from django.urls import reverse
 
-REGISTER_URL = reverse("register")
-TOKEN_URL = reverse("token_obtain")
-PROFILE_URL = reverse("user_profile")
+REGISTER_URL = reverse("user:register")
+TOKEN_URL = reverse("user:token_obtain")
+PROFILE_URL = reverse("user:user_profile")
 
 
 def create_user(**params):

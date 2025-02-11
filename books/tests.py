@@ -5,11 +5,11 @@ from rest_framework.test import APIClient
 from books.models import Book
 from django.urls import reverse
 
-BOOKS_URL = reverse("books-list")
+BOOKS_URL = reverse("books:books-list")
 
 
 def detail_url(book_id):
-    return reverse("books-detail", args=[book_id])
+    return reverse("books:books-detail", args=[book_id])
 
 
 class PublicBookApiTests(TestCase):

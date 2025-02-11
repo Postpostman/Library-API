@@ -8,11 +8,11 @@ from books.models import Book
 from payment.models import Payment, PaymentStatus, PaymentType
 from django.utils.timezone import now
 
-PAYMENT_URL = reverse("payment-list")
+PAYMENT_URL = reverse("payment:payment-list")
 
 
 def detail_url(payment_id):
-    return reverse("payment-detail", args=[payment_id])
+    return reverse("payment:payment-detail", args=[payment_id])
 
 
 class PublicPaymentApiTests(TestCase):

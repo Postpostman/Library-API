@@ -7,11 +7,11 @@ from borrowing.models import Borrowing
 from django.urls import reverse
 from django.utils.timezone import now
 
-BORROWING_URL = reverse("borrowing-list")
+BORROWING_URL = reverse("borrowing:borrowing-list")
 
 
 def detail_url(borrowing_id):
-    return reverse("borrowing-detail", args=[borrowing_id])
+    return reverse("borrowing:borrowing-detail", args=[borrowing_id])
 
 
 class PublicBorrowingApiTests(TestCase):
