@@ -4,7 +4,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN apt-get update && apt-get install -y libpq-dev gcc
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt --no-cache-dir --disable-pip-version-check
 
 ENV PYTHONUNBUFFERED=1
 
