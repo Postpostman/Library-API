@@ -3,7 +3,7 @@ from django.urls import path, include
 from borrowing.views import BorrowingViewSet
 
 router = DefaultRouter()
-router.register("", BorrowingViewSet)
+router.register("", BorrowingViewSet, basename="borrowing")
 
 urlpatterns = [
     path("", include(router.urls)),
